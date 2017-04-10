@@ -1,0 +1,15 @@
+.fonteMenu {
+    font-size: : 14px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .fonteMenu {
+        font-size: : 28px !important;
+    }
+}
+
+.button{
+  cursor: pointer;
+  border: 1px solid black;
+  text-align: center;
+}
