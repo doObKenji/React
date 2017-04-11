@@ -13,7 +13,7 @@ class Botao extends React.Component{
 
     componentDidMount(){
       this._dom = $(this.refs.botao);
-      this._dom.on('click', this._clicked);
+      this._dom.on('click', { param: this.props.scrollPosition },this._clicked);
       this._dom.on('mouseover', this._hover);
 
     }
@@ -24,10 +24,12 @@ class Botao extends React.Component{
       console.log("hover");
     }
 
-    _clicked(){
+    _clicked(event){
       // this.props.botaoClicked(this);
       // hashHistory.push('quamSomos');
-      console.log("click");
+      console.log("click", event.data.param);
+
+      window.scrollTo(0, event.data.param);
 
     }
 

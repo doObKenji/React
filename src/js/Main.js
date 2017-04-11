@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
+import Background from "./Background";
 import Sobrenos from "./Sobrenos";
 import Contato from "./Contato";
 import Menu from "./Menu";
@@ -23,6 +24,8 @@ class Main extends React.Component{
                 <div className="container-fluid">
                   <div className="row">
                     <Menu/>
+                    <Background/>
+
                     {/* <Contato meses={["Jan","Fev","Mar","Abr","Mai","Jun"]} />
                     <Sobrenos/> */}
                   </div>
@@ -42,6 +45,7 @@ class Main extends React.Component{
 ReactDom.render((
     <Router history={hashHistory}>
         <Route path="/" component={Main} />
+        <Route path="/Background" component={Background} />
         <Route path="/Sobrenos" component={Sobrenos} />
         <Route path="/Menu" component={Menu} />
         <Route path="/Contato" component={() => <Contato meses={["Jul","Ago","Set","Out","Nov","Dez"]}/>} />

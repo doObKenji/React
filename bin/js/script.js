@@ -26342,6 +26342,52 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var Background = function (_React$Component) {
+    _inherits(Background, _React$Component);
+
+    function Background(props) {
+        _classCallCheck(this, Background);
+
+        return _possibleConstructorReturn(this, (Background.__proto__ || Object.getPrototypeOf(Background)).call(this, props));
+    }
+
+    _createClass(Background, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement("img", { src: "../assets/bg.jpg", alt: "Background", height: "100%", width: "100%" })
+            );
+        }
+    }]);
+
+    return Background;
+}(_react2.default.Component);
+
+exports.default = Background;
+
+},{"react":236}],240:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var Contato = function (_React$Component) {
     _inherits(Contato, _React$Component);
 
@@ -26392,7 +26438,7 @@ var Contato = function (_React$Component) {
 
 exports.default = Contato;
 
-},{"react":236}],240:[function(require,module,exports){
+},{"react":236}],241:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26404,6 +26450,10 @@ var _react2 = _interopRequireDefault(_react);
 var _reactDom = require("react-dom");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Background = require("./Background");
+
+var _Background2 = _interopRequireDefault(_Background);
 
 var _Sobrenos = require("./Sobrenos");
 
@@ -26453,7 +26503,8 @@ var Main = function (_React$Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "row" },
-                        _react2.default.createElement(_Menu2.default, null)
+                        _react2.default.createElement(_Menu2.default, null),
+                        _react2.default.createElement(_Background2.default, null)
                     )
                 )
             );
@@ -26467,6 +26518,7 @@ _reactDom2.default.render(_react2.default.createElement(
     _reactRouter.Router,
     { history: _reactRouter.hashHistory },
     _react2.default.createElement(_reactRouter.Route, { path: "/", component: Main }),
+    _react2.default.createElement(_reactRouter.Route, { path: "/Background", component: _Background2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: "/Sobrenos", component: _Sobrenos2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: "/Menu", component: _Menu2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: "/Contato", component: function component() {
@@ -26474,7 +26526,7 @@ _reactDom2.default.render(_react2.default.createElement(
         } })
 ), document.getElementById('container'));
 
-},{"./Contato":239,"./Menu":241,"./Sobrenos":242,"react":236,"react-dom":52,"react-router":204}],241:[function(require,module,exports){
+},{"./Background":239,"./Contato":240,"./Menu":242,"./Sobrenos":243,"react":236,"react-dom":52,"react-router":204}],242:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26531,22 +26583,22 @@ var Menu = function (_React$Component) {
                 _react2.default.createElement(
                   "div",
                   { className: "col-xs-3" },
-                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 1" })
+                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 1", scrollPosition: "60" })
                 ),
                 _react2.default.createElement(
                   "div",
                   { className: "col-xs-3" },
-                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 2" })
+                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 2", scrollPosition: "180" })
                 ),
                 _react2.default.createElement(
                   "div",
                   { className: "col-xs-3" },
-                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 3" })
+                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 3", scrollPosition: "200" })
                 ),
                 _react2.default.createElement(
                   "div",
                   { className: "col-xs-3" },
-                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 4" })
+                  _react2.default.createElement(_Botao2.default, { valor: "Bot\xE3o 4", scrollPosition: "320" })
                 )
               )
             ),
@@ -26562,7 +26614,7 @@ var Menu = function (_React$Component) {
 
 exports.default = Menu;
 
-},{"./componentes/Botao":243,"react":236}],242:[function(require,module,exports){
+},{"./componentes/Botao":244,"react":236}],243:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26612,11 +26664,11 @@ var Sobrenos = function (_React$Component) {
 
 exports.default = Sobrenos;
 
-},{"react":236}],243:[function(require,module,exports){
+},{"react":236}],244:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26636,59 +26688,61 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Botao = function (_React$Component) {
-    _inherits(Botao, _React$Component);
+  _inherits(Botao, _React$Component);
 
-    // @Private _dom = null;
+  // @Private _dom = null;
 
-    function Botao(props) {
-        _classCallCheck(this, Botao);
+  function Botao(props) {
+    _classCallCheck(this, Botao);
 
-        return _possibleConstructorReturn(this, (Botao.__proto__ || Object.getPrototypeOf(Botao)).call(this, props));
+    return _possibleConstructorReturn(this, (Botao.__proto__ || Object.getPrototypeOf(Botao)).call(this, props));
+  }
+
+  _createClass(Botao, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this._dom = $(this.refs.botao);
+      this._dom.on('click', { param: this.props.scrollPosition }, this._clicked);
+      this._dom.on('mouseover', this._hover);
     }
+  }, {
+    key: '_hover',
+    value: function _hover() {
+      // this.props.botaoClicked(this);
+      // hashHistory.push('quamSomos');
+      console.log("hover");
+    }
+  }, {
+    key: '_clicked',
+    value: function _clicked(event) {
+      // this.props.botaoClicked(this);
+      // hashHistory.push('quamSomos');
+      console.log("click", event.data.param);
 
-    _createClass(Botao, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this._dom = $(this.refs.botao);
-            this._dom.on('click', this._clicked);
-            this._dom.on('mouseover', this._hover);
-        }
-    }, {
-        key: '_hover',
-        value: function _hover() {
-            // this.props.botaoClicked(this);
-            // hashHistory.push('quamSomos');
-            console.log("hover");
-        }
-    }, {
-        key: '_clicked',
-        value: function _clicked() {
-            // this.props.botaoClicked(this);
-            // hashHistory.push('quamSomos');
-            console.log("click");
-        }
-    }, {
-        key: 'terminou',
-        value: function terminou() {}
-    }, {
-        key: 'render',
-        value: function render() {
+      window.scrollTo(0, event.data.param);
+    }
+  }, {
+    key: 'terminou',
+    value: function terminou() {}
+  }, {
+    key: 'render',
+    value: function render() {
 
-            return _react2.default.createElement(
-                'div',
-                { ref: 'botao' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'button', value: this.props.valor },
-                    this.props.valor
-                )
-            );
-        }
-    }]);
+      return _react2.default.createElement(
+        'div',
+        { ref: 'botao' },
+        _react2.default.createElement(
+          'div',
+          { className: 'button', value: this.props.valor },
+          this.props.valor
+        )
+      );
+    }
+  }]);
 
-    return Botao;
+  return Botao;
 }(_react2.default.Component);
 
 exports.default = Botao;
 
-},{"react":236,"react-router":204}]},{},[240]);
+},{"react":236,"react-router":204}]},{},[241]);

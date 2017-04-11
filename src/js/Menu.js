@@ -23,16 +23,16 @@ class Menu extends React.Component{
                   <div className="col-xs-4">
                     <div className="row">
                       <div className="col-xs-3">
-                        <Botao valor="Botão 1"/>
+                        <Botao valor="Botão 1" scrollPosition="60"/>
                       </div>
                       <div className="col-xs-3">
-                        <Botao valor="Botão 2"/>
+                        <Botao valor="Botão 2" scrollPosition="180"/>
                       </div>
                       <div className="col-xs-3">
-                        <Botao valor="Botão 3"/>
+                        <Botao valor="Botão 3" scrollPosition="200"/>
                       </div>
                       <div className="col-xs-3">
-                        <Botao valor="Botão 4"/>
+                        <Botao valor="Botão 4" scrollPosition="320"/>
                       </div>
                     </div>
                   </div>
